@@ -240,12 +240,11 @@ body > * {
                 .progress-bar > .bar > .value > .loading-part {
                     display: inline-block;
                     width: 100%;
-                    height: 20px;
-                    border: 1px solid #e0e0e0;
-                    background: transparent;
-                    border-radius: 50px;
-                    padding: 5px 8px;
-                    margin-bottom: 20px;
+                    height: 100%;
+                    background-color: #90ACD1;
+                    animation-name: progress_bar_loading;
+                    animation-duration: 2s;
+                    animation-iteration-count: 1;
             }
                          .progress-bar > .bar > .value {
                             display: inline-block;
