@@ -57,7 +57,7 @@ var skills = [
     {
         title: 'Bootstrap',
         value: 60
-    }
+    },
 ];
 
 
