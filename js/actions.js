@@ -1,8 +1,14 @@
 "use strict";
 
 /* HEADER */
+window.onscroll = function() {stickToTop()};
 
 
+$('#header .menu').click(function(){
+    console.log('pirmas mano kartas :)');
+    console.log('su jumis... :D');
+    
+});
 
 /* HERO */
 
@@ -29,7 +35,7 @@ document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills
 
 
 /* JOB HISTORY */
-
+document.getElementById('history').innerHTML = renderHistory( jobs);
 
 
 /* TESTIMONIALS */
