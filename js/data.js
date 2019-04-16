@@ -42,6 +42,30 @@ var statistics = [
     }
 ];
 
+var offers = [
+    {
+        icon: 'diamond icon',
+        title: 'Web Design',
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'bar-chart icon',
+        title: 'App Development',
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'lightbulb-o icon',
+        title: 'Web Development' ,
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    },
+    {
+        icon: 'dashboard icon',
+        title: 'Web Development',
+        p: 'If you’re looking blank casvsettes on the web, you may confuse.'
+    }
+];
+
+
 /* SKILLS */
 var skills = [
     {
@@ -64,7 +88,38 @@ var skills = [
 
 
 /* LATEST WORKS */
-
+var works = [
+    {
+        img: 'w1.jpg',
+        title: 'Work 1',
+        categories: 'cat-1'
+    },
+    {
+        img: 'w2.jpg',
+        title: 'Work 2',
+        categories: 'cat-1'
+    },
+    {
+        img: 'w3.jpg',
+        title: 'Work 3',
+        categories: 'cat-2'
+    },
+    {
+        img: 'w4.jpg',
+        title: 'Work 4',
+        categories: 'cat-3'
+    },
+    {
+        img: 'w5.jpg',
+        title: 'Work 5',
+        categories: 'cat-2'
+    },
+    {
+        img: 'w6.jpg',
+        title: 'Work 6',
+        categories: 'cat-1'
+    }
+];
 
 
 /* JOB HISTORY */

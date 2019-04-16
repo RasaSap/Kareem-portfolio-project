@@ -41,8 +41,6 @@ function renderCards( data ) {
         if ( !data[i].icon ||
              typeof(data[i].icon) !== 'string' ||
              data[i].icon.length < 1 ||
-             !data[i].number ||
-             (''+data[i].number).length > 9 ||
              !data[i].title ||
              typeof(data[i].title) !== 'string' ||
              data[i].title.length < 1 ) {
@@ -52,12 +50,22 @@ function renderCards( data ) {
         if ( good_ones >= 4 ) {
             break;
         }
-        HTML += '<div class="card">\
-                    <i class="fa fa-'+data[i].icon+'"></i>\
-                    <div class="number">'+data[i].number+'</div>\
-                    <div class="title">'+data[i].title+'</div>\
-                </div>';
-        good_ones++;
+        if ( data[i].number ){
+            HTML += '<div class="card">\
+                        <i class="fa fa-'+data[i].icon+'"></i>\
+                        <div class="number">'+data[i].number+'</div>\
+                        <div class="title">'+data[i].title+'</div>\
+                    </div>';
+            good_ones++;
+        }
+        if ( data[i].p ){
+            HTML += '<div class="card">\
+                        <i class="fa fa-'+data[i].icon+'"></i>\
+                        <div class="title">'+data[i].title+'</div>\
+                        <div class="p">'+data[i].p+'</div>\
+                    </div>';
+            good_ones++;
+        }
     }
     return HTML;
 }
@@ -104,7 +112,45 @@ function renderSkills( data ) {
 
 
 /* LATEST WORKS */
+function renderWorks( data ) {
+    var HTML = '',
+        filter_HTML = '',
+        items_HTML = '';
+    if ( !Array.isArray(data) || data.length === 0 ){
+        return HTML;
+    }
 
+    for ( var i=0; i<data.length; i++ ) {
+        if ( true ) {
+            filter_HTML += '<div class="">\
+                                Filter-'+i+'\
+                            </div>';
+        }
+    }
+
+    for ( var i=0; i<data.length; i++ ) {
+        items_HTML += '<div class="item" style="background-image: url(img/works/'+data[i].img+');">\
+                        <div class="background">\
+                            <div class="texts">\
+                                <h4>'+data[i].title+'</h4>\
+                                <span>'+data[i].categories+'</span>\
+                            </div>\
+                        </div>\
+                    </div>';
+    }
+
+    HTML += '<div class="gallery">\
+                <div class="filter">\
+                    <div class="">All</div>\
+                    '+filter_HTML+'\
+                </div>\
+                <div class="item-list">\
+                    '+items_HTML+'\
+                </div>\
+            </div>';
+
+    return HTML;
+}
 
 
 /* JOB HISTORY */
